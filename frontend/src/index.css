@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-positive: #22c55e;
+    --color-negative: #ef4444;
+    --color-neutral: #94a3b8;
+  }
+
+  body {
+    @apply bg-gray-950 text-gray-100 antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-4;
+  }
+
+  .card-title {
+    @apply text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-positive {
+    @apply badge bg-green-900/50 text-green-400 border border-green-800;
+  }
+
+  .badge-negative {
+    @apply badge bg-red-900/50 text-red-400 border border-red-800;
+  }
+
+  .badge-neutral {
+    @apply badge bg-gray-800 text-gray-400 border border-gray-700;
+  }
+
+  .badge-social {
+    @apply badge bg-blue-900/50 text-blue-400 border border-blue-800;
+  }
+
+  .badge-news {
+    @apply badge bg-purple-900/50 text-purple-400 border border-purple-800;
+  }
+
+  .badge-official {
+    @apply badge bg-amber-900/50 text-amber-400 border border-amber-800;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #111827; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+.recharts-tooltip-wrapper { outline: none !important; }
